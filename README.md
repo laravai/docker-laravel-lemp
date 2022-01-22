@@ -38,6 +38,7 @@ composer create-project --prefer-dist "laravel/laravel=6.*" .
 
 ## 動作確認
 URL: http://localhost:80
+※現状ホットリロードには対応していないみたい（=コードを変更したら更新ボタン押さないと画面に変更内容が反映されない）
 
 ## 備考
 以下は必要に応じて使うコマンド
