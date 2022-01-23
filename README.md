@@ -25,7 +25,7 @@ cp .env.example .env
 docker compose build --no-cache
 
 # コンテナを起動
-# → この時点で3つのコンテナがちゃんと起動しているか確認する（GUIもしくは`docker compose ps`など）
+# → このコマンド実行後、3つのコンテナがちゃんと起動しているか確認する（GUIもしくは`docker compose ps`など）
 docker compose up -d
 
 # Laravelをインストールするため、appコンテナに入る（/docker-laravel-lempディレクトリで実行）
@@ -41,17 +41,17 @@ composer -v
 npm -v
 =========================
 
-# Laravelのインストール（appコンテナの中に入っている状態（=表示が「root@~~~:/var/www/html」となっている状態で実行する））
+# Laravelのインストール（appコンテナの中に入っている状態（=表示が「root@~~~:/var/www/html」となっている状態）で実行する）
 composer create-project --prefer-dist "laravel/laravel=6.*" .
 ```
 
 ## 動作確認
-URL: http://localhost:80
+URL: http://localhost:80  
 ※現状`*.blade.php`ファイルはホットリロードには対応していないみたい（=コードを変更したら更新ボタン押さないと画面に変更内容が反映されない）
 
 ## ホットリロードを設定したい場合
-Dockerのappコンテナ内で以下の作業を実行する
-（※ローカルにNodeが入っている場合はローカルから入れてしまってもコンテナ内に同期されるのでどちらもでよい）
+Dockerのappコンテナ内で以下の作業を実行する  
+（※ローカルにNodeが入っている場合はローカルから入れてしまってもコンテナ内に同期されるのでどちらもでよい）  
 （※後で判明。恐らくこれローカル環境にNode.jsが入ってないと動かせないかも…？）
 ```bash
 # 前提
