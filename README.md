@@ -88,6 +88,24 @@ http://localhost:3000
 ・Nodeインストール（Windows）：https://qiita.com/echolimitless/items/83f8658cf855de04b9ce
 ```
 
+## `php artisan 〇〇`コマンドを打つ時は…
+ローカル環境(コンテナ外部)にはPHPを実行する環境がないため、今後頻出する`php artisan 〇〇`コマンドを打つ際は、一度`appコンテナ`に入ってからコマンドを実行するようにする。  
+```bash
+# `php artisan 〇〇`コマンドを打つ際は一度 appコンテナ に入ってから実行する
+docker compose exec app bash
+
+# `php artisan 〇〇`コマンドの具体例（一部）
+php artisan make:model Todo --migration # マイグレーションファイル作成＆Todoモデルの作成
+php artisan migrate # マイグレーション処理の実行
+php artisan make:controller TodosController # Todoコントローラーの作成
+php artisan make:seeder TodoTableSeeder # シーダーファイルの作成
+php artisan db:seed # シーダーファイルをもとにシーディング処理を実行
+php artisan tinker # Laravelを対話的に動かすことが出来るようになるコマンド（参考：https://inouelog.com/laravel-tinker/）
+```
+
+## 開発注意点
+- PHPは文末のセミコロン（`;`）を省略するとエラーとなるので注意！
+
 ## その他
 以下は必要に応じて使うコマンド
 ```bash
