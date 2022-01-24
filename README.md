@@ -1,6 +1,7 @@
 ## 前提
 - VSCodeをインストールする（[公式](https://azure.microsoft.com/ja-jp/products/visual-studio-code/)）
 - Docker Desktop for Mac(or Windows)をインストールする（[公式](https://www.docker.com/products/docker-desktop)）
+  - Windows用参考：[【Docker Desktop】Windowsにインストール（WSL2）](https://chigusa-web.com/blog/windows%E3%81%ABdocker%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%A6python%E7%92%B0%E5%A2%83%E3%82%92%E6%A7%8B%E7%AF%89/)
 
 ## 自分のPC上にクローンするまで
 ```bash
@@ -126,3 +127,8 @@ docker compose ps
 # 全てやり直したい場合
 /srcディレクトリを丸ごと削除する → その後ルートディレクトリで手順1の `mkdir src` からやり直そう！
 ```
+
+## 実践: LaravelでTodoリストを作ろう！
+- [Laravelで超シンプルなToDoアプリを作成する](https://qiita.com/s_harada/items/39cfbd64a6df4f2ccf5d)
+- [【Laravel】Todoリストアプリの作成](https://qiita.com/JUM22676603/items/17beb3d4d71f5774df64)
+- [Laravel 6 で簡単なタスクリストを作ってみた](https://blog.maro.style/post-1115/)
