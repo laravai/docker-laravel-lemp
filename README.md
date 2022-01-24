@@ -46,8 +46,13 @@ composer create-project --prefer-dist "laravel/laravel=6.*" .
 ```
 
 ## 動作確認
+### webサーバーへのアクセス
 URL: http://localhost:80  
 ※現状`*.blade.php`ファイルはホットリロードには対応していないみたい（=コードを変更したら更新ボタン押さないと画面に変更内容が反映されない）
+
+### phpMyAdminへのアクセス
+URL: http://localhost:8080 
+
 
 ## ホットリロードを設定したい場合
 Dockerのappコンテナ内で以下の作業を実行する  
