@@ -42,7 +42,10 @@ composer -v
 npm -v
 =========================
 
-# Laravelのインストール（appコンテナの中に入っている状態（=表示が「root@~~~:/var/www/html」となっている状態）で実行する）
+# Laravel最新版のインストール（appコンテナの中に入っている状態（=表示が「root@~~~:/var/www/html」となっている状態）で実行する）
+composer create-project --prefer-dist laravel/laravel .
+
+# Laravelバージョン6系をインストールしたい場合はこちら
 composer create-project --prefer-dist "laravel/laravel=6.*" .
 ```
 
